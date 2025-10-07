@@ -8,6 +8,12 @@ It covers configuration, security, automation, and monitoring for a complete clo
 
 ---
 
+## 🧠 11. What is the full form of RDS?
+**RDS** = Relational Database Service.
+- `It’s an AWS-managed service that simplifies deploying, operating, and scaling relational databases like SQL Server, MySQL, and PostgreSQL in the cloud.`
+
+---
+
 ## ⚙️ 2. What are the main components?
 | Component | Description |
 |------------|-------------|
@@ -39,21 +45,21 @@ bash infrastructure/scripts/create_rds_instance.sh
 ### 🔗 4. How do I connect to the RDS SQL Server?
 1. Open SQL Server Management Studio (SSMS)
 2. Enter your credentials:
-   ```pgsql
-       Server Name: <your-rds-endpoint>
-       Authentication: SQL Server Authentication
-       Username: <master username>
-       Password: <password>
-   ```
+```pgsql
+Server Name: <your-rds-endpoint>
+Authentication: SQL Server Authentication
+Username: <master username>
+Password: <password>
+```
 3. Test your connection with:
-    ```sql
-       SELECT @@VERSION;
-    ```
+```sql
+SELECT @@VERSION;
+```
 ### 💾 5. How are backups handled?
 - Automated backups are enabled within RDS.
 - Manual backups can be triggered with:
   ```bash
-      bash infrastructure/scripts/backup_rds_snapshot.sh
+  bash infrastructure/scripts/backup_rds_snapshot.sh
   ```
 - Snapshots and logs are stored in Amazon S3.
 - Backup retention is configurable in the RDS settings.
@@ -77,11 +83,47 @@ bash infrastructure/scripts/create_rds_instance.sh
     - Free storage space
     - Read/Write IOPS
       ```bash
-         monitoring/cloudwatch_dashboard.json
-         monitoring/alert_rules.md
+      monitoring/cloudwatch_dashboard.json
+      monitoring/alert_rules.md
       ```
 
 ---
 
 ### 🏗️ 8. Where can I see the architecture?
-📁 [docs/architecture-diagram.png]
+📁 [docs/architecture-diagram.png](https://github.com/anirbanbanerjee07/SQLServer-RDS-Deployment-Project/blob/main/docs/architecture-diagram.png)
+* **Architecture Overview:**
+  - Client → EC2 → SQL Server (RDS)
+  - RDS → S3 (Backups)
+  - CloudWatch → Monitoring
+
+---
+
+### 🧩 9. Can I use this setup for other databases?
+- MySQL
+- PostgreSQL
+- Oracle
+- MariaDB
+
+---
+
+### ⚡ 10. What files are runnable in this project?
+| File                                            | Purpose                    | How to Run                                           |
+| ----------------------------------------------- | -------------------------- | ---------------------------------------------------- |
+| `infrastructure/scripts/create_rds_instance.sh` | Creates RDS instance       | `bash infrastructure/scripts/create_rds_instance.sh` |
+| `infrastructure/scripts/backup_rds_snapshot.sh` | Takes RDS snapshot         | `bash infrastructure/scripts/backup_rds_snapshot.sh` |
+| `infrastructure/scripts/monitor_rds_metrics.sh` | Fetches CloudWatch metrics | `bash infrastructure/scripts/monitor_rds_metrics.sh` |
+| `infrastructure/terraform/*.tf`                 | Terraform deployment files | `terraform apply`                                    |
+
+---
+
+### 👨‍💻 12. Who maintains this project?
+- Author: [Anirban Banerjee](https://github.com/anirbanbanerjee07)
+- Project: SQLServer-RDS-Deployment-Project
+- Contributions: Open for pull requests and issue reporting on GitHub 💬
+
+---
+
+⭐ Maintained with care to help developers deploy secure and scalable SQL Server databases on AWS RDS! ☁️🔐
+```yaml
+Would you like me to generate the **matching `deployment-guide.md`** (with Terraform + AWS CLI step-by-step setup and example outputs) next so your `docs/` folder feels complete?
+```
