@@ -6,8 +6,6 @@
 This project shows how to **deploy and manage a Microsoft SQL Server database** using **AWS RDS (Relational Database Service)**.  
 It covers configuration, security, automation, and monitoring for a complete cloud-based SQL Server deployment.
 
----
-
 ## 🧠 2. What is the full form of RDS?
 **RDS** = Relational Database Service.
 - `It’s an AWS-managed service that simplifies deploying, operating, and scaling relational databases like SQL Server, MySQL, and PostgreSQL in the cloud.`
@@ -127,3 +125,4 @@ SELECT @@VERSION;
 ```yaml
 Would you like me to generate the **matching `deployment-guide.md`** (with Terraform + AWS CLI step-by-step setup and example outputs) next so your `docs/` folder feels complete?
 ```
+
