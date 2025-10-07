@@ -5,13 +5,13 @@
 This project shows how to **deploy and manage a Microsoft SQL Server database** using **AWS RDS (Relational Database Service)**.  
 It covers configuration, security, automation, and monitoring for a complete cloud-based SQL Server deployment.
 
-## 🧠 11. What is the full form of RDS?
+## 🧠 2. What is the full form of RDS?
 **RDS** = Relational Database Service.
 - `It’s an AWS-managed service that simplifies deploying, operating, and scaling relational databases like SQL Server, MySQL, and PostgreSQL in the cloud.`
 
 ---
 
-## ⚙️ 2. What are the main components?
+## ⚙️ 3. What are the main components?
 | Component | Description |
 |------------|-------------|
 | **AWS RDS (SQL Server)** | Managed relational database service |
@@ -22,7 +22,7 @@ It covers configuration, security, automation, and monitoring for a complete clo
 
 ---
 
-## 🚀 3. How do I deploy the RDS instance?
+## 🚀 4. How do I deploy the RDS instance?
 You can use either **Terraform** or **AWS CLI scripts**.
 
 ### ✅ Option 1 — Using Terraform:
@@ -39,7 +39,7 @@ bash infrastructure/scripts/create_rds_instance.sh
 ```
 ---
 
-### 🔗 4. How do I connect to the RDS SQL Server?
+### 🔗 5. How do I connect to the RDS SQL Server?
 1. Open SQL Server Management Studio (SSMS)
 2. Enter your credentials:
 ```pgsql
@@ -52,7 +52,7 @@ Password: <password>
 ```sql
 SELECT @@VERSION;
 ```
-### 💾 5. How are backups handled?
+### 💾 6. How are backups handled?
 - Automated backups are enabled within RDS.
 - Manual backups can be triggered with:
   ```bash
@@ -63,7 +63,7 @@ SELECT @@VERSION;
 
 ---
 
-### 🔒 6. How is security ensured?
+### 🔒 7. How is security ensured?
 * **This project follows AWS security best practices:**
 * Database runs in a private subnet (VPC)
 * Security Groups restrict inbound traffic (port `1433` for SQL Server)
@@ -73,7 +73,7 @@ SELECT @@VERSION;
 
 ---
 
-### 📊 7. How do I monitor RDS performance?
+### 📊 8. How do I monitor RDS performance?
 * **Use Amazon CloudWatch for:**
     - CPU utilization
     - Active connections
@@ -86,7 +86,7 @@ SELECT @@VERSION;
 
 ---
 
-### 🏗️ 8. Where can I see the architecture?
+### 🏗️ 9. Where can I see the architecture?
 📁 [docs/architecture-diagram.png](https://github.com/anirbanbanerjee07/SQLServer-RDS-Deployment-Project/blob/main/docs/architecture-diagram.png)
 * **Architecture Overview:**
   - Client → EC2 → SQL Server (RDS)
@@ -95,7 +95,7 @@ SELECT @@VERSION;
 
 ---
 
-### 🧩 9. Can I use this setup for other databases?
+### 🧩 10. Can I use this setup for other databases?
 - MySQL
 - PostgreSQL
 - Oracle
@@ -103,7 +103,7 @@ SELECT @@VERSION;
 
 ---
 
-### ⚡ 10. What files are runnable in this project?
+### ⚡ 11. What files are runnable in this project?
 | File                                            | Purpose                    | How to Run                                           |
 | ----------------------------------------------- | -------------------------- | ---------------------------------------------------- |
 | `infrastructure/scripts/create_rds_instance.sh` | Creates RDS instance       | `bash infrastructure/scripts/create_rds_instance.sh` |
