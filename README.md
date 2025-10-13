@@ -28,7 +28,7 @@ You can use either **Terraform** or **AWS CLI scripts**.
 ### ✅ Option 1 — Using Terraform:
 ```bash
 cd infrastructure/terraform
-terraform init
+terraform __init__
 terraform plan
 terraform apply
 ```
